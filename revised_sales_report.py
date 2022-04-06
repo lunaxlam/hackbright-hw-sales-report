@@ -21,7 +21,10 @@ for line in f:
     melons = int(entries[2])
 
     # Add salesperson and number of melons sold to the dictionary
-    sales_summary[salesperson] = melons
+    if salesperson in sales_summary:
+        sales_summary[salesperson] += melons
+    else:
+        sales_summary[salesperson] = melons
 
 # Iterate through each element in dictionary
 for salesperson, melons in sales_summary.items():
