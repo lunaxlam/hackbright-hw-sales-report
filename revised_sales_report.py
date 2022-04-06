@@ -42,17 +42,23 @@ def print_melon_report(sales_summary, file):
         print(f'{salesperson} sold {melons_sold} melons.')
 
 
-# Get a file as a string from the command line
-f = sys.argv[1]
+def main():
+    """Run the program"""
 
-# Open the file
-file = open_file(f)
+    # Get a file as a string from the command line
+    f = sys.argv[1]
 
-# Generate sales info
-sales_summary = get_melon_sales(file)
+    # Open the file
+    file = open_file(f)
 
-# Print message
-print(print_melon_report(sales_summary, file))
+    # Generate sales info
+    sales_summary = get_melon_sales(file)
 
-# Close the file
-file.close()
+    # Print message
+    print(print_melon_report(sales_summary, file))
+
+    # Close the file
+    file.close()
+
+# Call function
+main()
