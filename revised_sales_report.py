@@ -40,8 +40,6 @@ def print_melon_report(sales_summary, file):
     for salesperson, melons_sold in sales_summary.items():
         # Print message
         print(f'{salesperson} sold {melons_sold} melons.')
-    
-    file.close()
 
 
 # Get a file as a string from the command line
@@ -56,3 +54,5 @@ sales_summary = get_melon_sales(file)
 # Print message
 print(print_melon_report(sales_summary, file))
 
+# Close the file
+file.close()
